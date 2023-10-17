@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+HfEMvEoYOFIoZ9Pf8TEVxX6Nhej8ifqzl7MjTGNgauMCtMiL4ni4ipms78O2qoHbOGG+k68U4ltTCa+J4F96g==",
+  "dgSpecHash": "MxjOMwdAU68nyrSZsgSeitquB8TUeUagLB0hN1C/28tUVJR6ge0fZFbsbF53Yp3Gilm2eq+JI9a3YsWgpqqrZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hp\\Desktop\\Bill System\\New folder\\Team-and-Project-Mngt-System\\team-managment-api\\IntegratedImplementation\\IntegratedImplementation.csproj",
+  "projectFilePath": "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\IntegratedImplementation\\IntegratedImplementation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hp\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Hp\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

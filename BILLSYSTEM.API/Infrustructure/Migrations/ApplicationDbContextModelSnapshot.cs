@@ -193,8 +193,9 @@ namespace IntegratedInfrustructure.Migrations
                     b.Property<DateTime>("EmploymentDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("EmploymentPosition")
-                        .HasColumnType("int");
+                    b.Property<string>("EmploymentPosition")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("EmploymentStatus")
                         .HasColumnType("int");

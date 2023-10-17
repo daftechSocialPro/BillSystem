@@ -26,7 +26,7 @@ namespace IntegratedInfrustructure.Model.HRM
         public DateTime EmploymentDate { get; set; }  
         public DateTime? TerminatedDate { get; set; }  
         public EmploymentStatus EmploymentStatus { get; set; }
-        public EmploymentPosition EmploymentPosition { get; set; } 
+        public string EmploymentPosition { get; set; } 
 
     }
 

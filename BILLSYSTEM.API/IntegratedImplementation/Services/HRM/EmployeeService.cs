@@ -65,7 +65,7 @@ namespace IntegratedImplementation.Services.HRM
                 Email = addEmployee.Email,
 
                 EmploymentStatus = Enum.Parse<EmploymentStatus>(addEmployee.EmploymentStatus),
-                EmploymentPosition = Enum.Parse<EmploymentPosition>(addEmployee.EmploymentPosition),
+                EmploymentPosition = addEmployee.EmploymentPosition,
 
                 FullName = addEmployee.FirstName +" "+addEmployee.LastName,
                 Address = addEmployee.Address,
@@ -120,7 +120,7 @@ namespace IntegratedImplementation.Services.HRM
 
                 employee.Email = addEmployee.Email;
                 employee.EmploymentStatus = Enum.Parse<EmploymentStatus>(addEmployee.EmploymentStatus);
-                employee.EmploymentPosition = Enum.Parse<EmploymentPosition>(addEmployee.EmploymentPosition);
+                employee.EmploymentPosition =addEmployee.EmploymentPosition;
 
                 employee.FullName = addEmployee.FirstName + " " + addEmployee.LastName;
                 employee.Address = addEmployee.Address;
