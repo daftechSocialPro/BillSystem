@@ -1,0 +1,77 @@
+<div class="row">
+    <!-- [ Typography ] start -->
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <h5>Employee List </h5>
+          <div class="col-lg-12 text-end p-2">
+            <button type="button" class="btn btn-outline-primary" (click)="addEmployee()"><i
+                    class="pi pi-user-plus me-1"></i>
+                Employee</button>
+        </div>
+        </div>
+        
+        <div class="card-body p-4">
+
+            <p-table #dt [value]="employees" [rows]="5" [paginator]="true"
+            [globalFilterFields]="['employeeName', 'employeeCode', 'employmentType', 'employmentStatus']"
+            [tableStyle]="{'min-width': '75rem'}" dataKey="id"
+            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+            [showCurrentPageReport]="true">
+            <ng-template pTemplate="caption">
+                <div class="flex align-items-center justify-content-between">
+                    <span class="p-input-icon-left">
+                        <i class="pi pi-search"></i>
+                        <input pInputText type="text" (input)="onGlobalFilter(dt, $event)"
+                            placeholder="Search..." class="w-full sm:w-auto" />
+                    </span>
+                </div>
+            </ng-template>
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Full Name</th>
+                    <th>Phone Number / Email </th>
+                    <th>Position</th>
+                    <!-- <th>Birth Date</th> -->
+                    <th>Employment Date</th>
+                    <th>Employment Status</th>
+                    <th>Action</th>
+
+
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-employee>
+                <tr class="table-row" >
+                    <td class="employee-details">
+                        <img [src]="getImagePath(employee.imagePath)" width="40" alt="user png" class="rounded-circle">
+                        <div class="employee-info">
+                            <div class="employee-name">{{ employee.employeeName }}</div>
+                            <div class="employee-code">{{ employee.employeeCode.toUpperCase() }}</div>
+                        </div>
+                    </td>
+                    <td>{{ employee.phoneNumber }} / {{employee.email}} </td>
+                    <!-- <td>{{ employee.birthDate | date:"MMM dd, YYY"}} </td> -->
+                    <td>{{ employee.employmentPosition}}</td>
+                    <td>{{ employee.employmentDate | date:"MMM dd, YYY" }}</td>
+                    <td>{{ employee.employmentStatus }}</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-warning" (click)="updateEmployee(employee)"><i
+                            class="pi pi-pencil me-1"></i>
+                        </button>
+                    </td>
+                 
+                
+                  
+                </tr>
+            </ng-template>
+
+
+        </p-table>
+         
+        </div>
+      </div>
+
+    </div>
+    <!-- [ Typography ] end -->
+  </div>
+  

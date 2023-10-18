@@ -8,8 +8,8 @@ namespace Implementation.Interfaces.Authentication
         Task<ResponseMessage> Login(LoginDto login);
         Task<List<UserListDto>> GetUserList();
         Task<List<RoleDropDown>> GetRoleCategory();
-        Task<List<RoleDropDown>> GetNotAssignedRole(string userId, int categoryId);
-        Task<List<RoleDropDown>> GetAssignedRoles(string userId, int categoryId);
+        Task<List<RoleDropDown>> GetNotAssignedRole(string userId);
+        Task<List<RoleDropDown>> GetAssignedRoles(string userId);
         Task<ResponseMessage> AssignRole(UserRoleDto userRole);
         Task<ResponseMessage> RevokeRole(UserRoleDto userRole);
         //Task<ResponseMessage> ChangeStatusOfUser(string userId);

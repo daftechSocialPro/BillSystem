@@ -103,12 +103,12 @@ export class UserService {
     return this.http.get<SelectList[]>(this.BaseURI+"/Authentication/GetRoleCategory")
   }
 
-  getNotAssignedRole(userId:string, roleCategory:number){
-    return this.http.get<SelectList[]>(this.BaseURI+`/Authentication/GetNotAssignedRole?userId=${userId}&categoryId=${roleCategory}`)
+  getNotAssignedRole(userId:string){
+    return this.http.get<SelectList[]>(this.BaseURI+`/Authentication/GetNotAssignedRole?userId=${userId}`)
     
   }
-  getAssignedRole(userId:string, roleCategory:number){
-    return this.http.get<SelectList[]>(this.BaseURI+`/Authentication/GetAssignedRoles?userId=${userId}&categoryId=${roleCategory}`)
+  getAssignedRole(userId:string){
+    return this.http.get<SelectList[]>(this.BaseURI+`/Authentication/GetAssignedRoles?userId=${userId}`)
     
   }
   assignRole(body:any){

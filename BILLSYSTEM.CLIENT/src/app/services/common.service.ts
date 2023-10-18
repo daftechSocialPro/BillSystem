@@ -1,15 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { IndividualConfig, ToastrService } from 'ngx-toastr';
+
 import { environment } from 'src/environments/environment';
 
-export interface toastPayload {
-  message: string;
-  title: string;
-  ic: IndividualConfig;
-  type: string;
-}
 
 @Injectable({
   providedIn: 'root',
@@ -18,16 +12,9 @@ export class CommonService {
 
   baseUrl: string = environment.baseUrl + '/common'
   baseUrlPdf : string = environment.baseUrl
-  constructor(private toastr: ToastrService, private http: HttpClient,private sanitizer: DomSanitizer) { }
+  constructor( private http: HttpClient,private sanitizer: DomSanitizer) { }
 
-  showToast(toast: toastPayload) {
-    this.toastr.show(
-      toast.message,
-      toast.title,
-      toast.ic,
-      'toast-' + toast.type
-    );
-  }
+
 
   createImgPath = (dbPath: String) => {
 

@@ -119,7 +119,7 @@ namespace Implementation.Services.Authentication
 
 
                 };
-                userListt.Roles = await GetAssignedRoles(user.Id, 1);
+                userListt.Roles = await GetAssignedRoles(user.Id);
 
                 userLists.Add(userListt);
 
@@ -152,14 +152,14 @@ namespace Implementation.Services.Authentication
 
 
 
-                if ((!addUSer.Roles.IsNullOrEmpty()) && currentEmployee1 != null)
-                {
-                    var userRoles = new UserRoleDto();
-                    userRoles.UserId = currentEmployee1.Id;
-                    userRoles.RoleName = addUSer.Roles ;
+                //if ((!addUSer.Roles.IsNullOrEmpty()) && currentEmployee1 != null)
+                //{
+                //    var userRoles = new UserRoleDto();
+                //    userRoles.UserId = currentEmployee1.Id;
+                //    userRoles.RoleName = addUSer.Roles ;
 
-                    await _userManager.AddToRoleAsync(currentEmployee1, userRoles.RoleName);
-                }
+                //    await _userManager.AddToRoleAsync(currentEmployee1, userRoles.RoleName);
+                //}
                 return new ResponseMessage { Success = true, Message = "Succesfully Added User", Data = applicationUser.UserName };
             }
             else
@@ -182,7 +182,7 @@ namespace Implementation.Services.Authentication
 
             return roleCategory;
         }
-        public async Task<List<RoleDropDown>> GetNotAssignedRole(string userId, int categoryId)
+        public async Task<List<RoleDropDown>> GetNotAssignedRole(string userId)
         {
             var currentuser = await _userManager.Users.FirstOrDefaultAsync(x => x.Id.Equals(userId));
             if (currentuser != null)
@@ -219,7 +219,7 @@ namespace Implementation.Services.Authentication
             throw new FileNotFoundException();
         }
 
-        public async Task<List<RoleDropDown>> GetAssignedRoles(string userId, int categoryId)
+        public async Task<List<RoleDropDown>> GetAssignedRoles(string userId)
         {
             var currentuser = await _userManager.Users.FirstOrDefaultAsync(x => x.Id.Equals(userId));
             if (currentuser != null)
@@ -249,24 +249,31 @@ namespace Implementation.Services.Authentication
         {
             var currentUser = await _userManager.Users.FirstOrDefaultAsync(x=>x.Id==userRole.UserId);
 
-            if (currentUser != null)
+            foreach (var role in userRole.RoleName)
             {
-                var roleExists = await _roleManager.RoleExistsAsync(userRole.RoleName);
 
-                if (roleExists)
+                if (currentUser != null)
                 {
-                    await _userManager.AddToRoleAsync(currentUser, userRole.RoleName);
-                    return new ResponseMessage { Success = true, Message = "Successfully Added Role" };
+                    var roleExists = await _roleManager.RoleExistsAsync(role);
+
+                    if (roleExists)
+                    {
+                        await _userManager.AddToRoleAsync(currentUser, role);
+
+                    }
+                    else
+                    {
+                        return new ResponseMessage { Success = false, Message = "Role does not exist" };
+                    }
                 }
                 else
                 {
-                    return new ResponseMessage { Success = false, Message = "Role does not exist" };
+                    return new ResponseMessage { Success = false, Message = "User Not Found" };
                 }
             }
-            else
-            {
-                return new ResponseMessage { Success = false, Message = "User Not Found" };
-            }
+
+
+            return new ResponseMessage { Success = true, Message = "Successfully Added Role" };
         }
 
 
@@ -276,7 +283,9 @@ namespace Implementation.Services.Authentication
 
             if (curentUser != null)
             {
-                await _userManager.RemoveFromRoleAsync(curentUser, userRole.RoleName);
+                foreach (var role in userRole.RoleName) { 
+                    await _userManager.RemoveFromRoleAsync(curentUser, role);
+            }
                 return new ResponseMessage { Success = true, Message = "Succesfully Revoked Roles" };
             }
             return new ResponseMessage { Success = false, Message = "User Not Found" };

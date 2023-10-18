@@ -22,6 +22,7 @@ namespace IntegratedImplementation.Datas
 
             CreateMap<EmployeeList, EmployeeGetDto>()
                 .ForMember(a => a.Id, e => e.MapFrom(mfg => mfg.Id))
+                .ForMember(a => a.EmployeeName, e => e.MapFrom(mfg => $"{mfg.FullName}"))
                 .ForMember(a => a.Gender, e => e.MapFrom(mfg => mfg.Gender.ToString()))
                 .ForMember(a => a.EmploymentPosition, e => e.MapFrom(mfg => mfg.EmploymentPosition.ToString()))
                 .ForMember(a => a.EmploymentStatus, e => e.MapFrom(mfg => mfg.EmploymentStatus.ToString()));

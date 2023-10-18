@@ -59,16 +59,16 @@ namespace ERPSystems.Controllers.Authentication
 
         [HttpGet]
         [ProducesResponseType(typeof(RoleDropDown), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetNotAssignedRole(string userId, int categoryId)
+        public async Task<IActionResult> GetNotAssignedRole(string userId)
         {
-            return Ok(await _authenticationService.GetNotAssignedRole(userId,categoryId));
+            return Ok(await _authenticationService.GetNotAssignedRole(userId));
         }
 
         [HttpGet]
         [ProducesResponseType(typeof(RoleDropDown), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetAssignedRoles(string userId, int categoryId)
+        public async Task<IActionResult> GetAssignedRoles(string userId)
         {
-            return Ok(await _authenticationService.GetAssignedRoles(userId, categoryId));
+            return Ok(await _authenticationService.GetAssignedRoles(userId));
         }
 
 

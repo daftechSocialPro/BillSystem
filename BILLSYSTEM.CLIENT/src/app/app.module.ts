@@ -22,7 +22,14 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthHeaderIneterceptor } from './http-interceptors/auth-header-interceptor';
 import { MessageService } from 'primeng/api';
 import { SpinnerComponent } from './components/spinner/spinner.component';
-import { ToastModule} from 'primeng/toast'
+import { ToastModule} from 'primeng/toast';
+import { DropdownModule } from 'primeng/dropdown';
+
+import { AddEmployeeComponent } from './demo/pages/employees/add-employee/add-employee.component';
+import { UpdateEmployeeComponent } from './demo/pages/employees/update-employee/update-employee.component';
+import { AddUserComponent } from './demo/pages/users/add-user/add-user.component';
+import { UserRoleComponent } from './demo/pages/users/user-role/user-role.component';
+import { AutoCompleteComponent } from './components/auto-complete/auto-complete.component'
 
 @NgModule({
   declarations: [
@@ -39,10 +46,11 @@ import { ToastModule} from 'primeng/toast'
     NavCollapseComponent,
     ConfigurationComponent,
     GuestComponent,
-    SpinnerComponent,
+    SpinnerComponent, 
+     AddEmployeeComponent, UpdateEmployeeComponent, AddUserComponent, UserRoleComponent, AutoCompleteComponent,
 
   ],
-  imports: [BrowserModule, AppRoutingModule, SharedModule, BrowserAnimationsModule,HttpClientModule,ToastModule],
+  imports: [BrowserModule, AppRoutingModule, SharedModule, BrowserAnimationsModule,HttpClientModule,ToastModule,DropdownModule],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

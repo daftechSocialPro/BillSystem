@@ -49,7 +49,7 @@ namespace Implementation.DTOS.Authentication
     public class UserRoleDto
     {
         public string UserId { get; set; } = null!;
-        public string RoleName { get; set; } = null!;
+        public string[] RoleName { get; set; } = null!;
     }
 
     public class ChangePasswordDto

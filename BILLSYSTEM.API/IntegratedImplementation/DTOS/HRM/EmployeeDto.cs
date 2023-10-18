@@ -43,6 +43,8 @@ namespace IntegratedImplementation.DTOS.HRM
        
         public Guid Id { get; set; }
         public string? EmployeeCode { get; set; } 
+
+        public string ? EmployeeName { get; set; }
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;
 

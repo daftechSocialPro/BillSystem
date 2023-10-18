@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
-import { UserService } from 'src/services/user.service';
+import { UserService } from 'src/app/services/user.service';
 import { MessageService } from 'primeng/api';
 import {ButtonModule} from 'primeng/button'
 import { UserView } from 'src/models/auth/userDto';

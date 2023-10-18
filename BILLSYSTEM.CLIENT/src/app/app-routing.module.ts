@@ -7,7 +7,7 @@ import { AuthGuard } from './auth/auth.guard';
 const routes: Routes = [
   {
     path: '',
-    canActivate:[AuthGuard],
+    canActivate: [AuthGuard],
     component: AdminComponent,
     children: [
       {
@@ -30,7 +30,18 @@ const routes: Routes = [
       {
         path: 'sample-page',
         loadComponent: () => import('./demo/sample-page/sample-page.component')
+      },
+      {
+        path: 'employees',
+        loadComponent: () => import('./demo/pages/employees/employees.component') 
+       
+      },
+      {
+        path: 'users',
+        loadComponent: () => import('./demo/pages/users/users.component') 
+       
       }
+      
     ]
   },
   {
@@ -38,15 +49,16 @@ const routes: Routes = [
     component: GuestComponent,
     children: [
       {
-        path: 'guest',
+        path: 'auth',
         loadChildren: () => import('./demo/pages/authentication/authentication.module').then((m) => m.AuthenticationModule)
       }
     ]
-  }
+  },
+  
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

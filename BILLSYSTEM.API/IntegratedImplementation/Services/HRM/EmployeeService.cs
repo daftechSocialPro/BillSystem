@@ -111,7 +111,7 @@ namespace IntegratedImplementation.Services.HRM
 
 
 
-            addEmployee.EmploymentStatus = EmploymentStatus.ACTIVE.ToString();
+            
 
             var employee = _dbContext.Employees.Find(addEmployee.Id);
 
