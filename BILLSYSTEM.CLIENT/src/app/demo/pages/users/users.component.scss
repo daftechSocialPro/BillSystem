@@ -1,0 +1,12 @@
+.avatar-container{
+    background: gray;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.avatar{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,14 @@
+.logo-size {
+    max-width: 100%;
+    padding-top: 1rem;
+    height:110px;
+    padding-bottom: 0.5rem;
+}
+
+
+@media screen and (min-width:1024px) {
+    .logo-nav-wrapper{
+        display: none !important;
+        background-color: red;
+    }
+}
