@@ -35,6 +35,62 @@ const NavigationItems = [
     ]
   },
   {
+    id: 'page2',
+    title: 'Bill System',
+    type: 'group',
+    icon: 'icon-navigation',
+    children: [
+      {
+        id: 'Authentication',
+        title: 'Software Control',
+        type: 'collapse',
+        icon: 'ti ti-settings',
+        children: [
+          {
+            id: 'data',
+            title: 'Home',
+            type: 'item',       
+            url: '/system-control/home',           
+            breadcrumbs: false
+          },
+          {
+            id: 'data',
+            title: 'Data',
+            type: 'item',       
+            url: '/system-control/data',           
+            breadcrumbs: false
+          },
+          
+          {
+            id: 'data',
+            title: 'Maintain',
+            type: 'item',
+           
+            url: '/system-control/maintain',
+         
+            breadcrumbs: false
+          },
+          
+          {
+            id: 'setup',
+            title: 'Setup',
+            type: 'item',       
+            url: '/system-control/setup',        
+            breadcrumbs: false
+          },
+          
+          {
+            id: 'setting',
+            title: 'Setting',
+            type: 'item',         
+            url: '/system-control/setting',     
+            breadcrumbs: false
+          }
+        ]
+      }
+    ]
+  },
+  {
     id: 'page',
     title: 'Configuration',
     type: 'group',
@@ -50,8 +106,7 @@ const NavigationItems = [
             id: 'employee',
             title: 'Employees',
             type: 'item',
-            url: '/employees',
-        
+            url: '/employees',        
             breadcrumbs: false
           },
           {
@@ -66,54 +121,7 @@ const NavigationItems = [
       }
     ]
   },
-  {
-    id: 'page2',
-    title: 'System Control',
-    type: 'group',
-    icon: 'icon-navigation',
-    children: [
-    
-      {
-        id: 'data',
-        title: 'Data',
-        type: 'item',
-        classes: 'nav-item',
-        url: '/system-control/data',
-        icon: 'ti ti-dashboard',
-        breadcrumbs: false
-      },
-      
-      {
-        id: 'data',
-        title: 'Maintain',
-        type: 'item',
-        classes: 'nav-item',
-        url: '/system-control/maintain',
-        icon: 'ti ti-dashboard',
-        breadcrumbs: false
-      },
-      
-      {
-        id: 'setup',
-        title: 'Setup',
-        type: 'item',
-        classes: 'nav-item',
-        url: '/system-control/setup',
-        icon: 'ti ti-dashboard',
-        breadcrumbs: false
-      },
-      
-      {
-        id: 'setting',
-        title: 'Setting',
-        type: 'item',
-        classes: 'nav-item',
-        url: '/system-control/setting',
-        icon: 'ti ti-dashboard',
-        breadcrumbs: false
-      }
-    ]
-  },
+ 
  
 ];
 

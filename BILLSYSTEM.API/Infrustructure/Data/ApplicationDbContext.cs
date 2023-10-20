@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using IntegratedInfrustructure.Model.Configuration;
 using IntegratedInfrustructure.Model.HRM;
 using IntegratedInfrustructure.Model.SRC;
+using IntegratedInfrustructure.Model.SCS;
 
 namespace IntegratedInfrustructure.Data
 {
@@ -40,6 +41,8 @@ namespace IntegratedInfrustructure.Data
         #region SCS
 
         public DbSet<CustomerCategory> CustomerCategories { get; set; }
+
+        public DbSet<MeterSize> MeterSizes { get; set; }
         #endregion
 
 
@@ -65,6 +68,8 @@ namespace IntegratedInfrustructure.Data
 
 
             modelBuilder.Entity<CustomerCategory>().ToTable("CustomerCategories", "SCS");
+
+            modelBuilder.Entity<MeterSize>().ToTable("MeterSizes", "SCS");
             //modelBuilder.Entity<IdentityUserLogin<string>>(entity =>
             //{
             //    entity.HasNoKey();
