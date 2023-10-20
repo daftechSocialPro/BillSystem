@@ -33,15 +33,22 @@ const routes: Routes = [
       },
       {
         path: 'employees',
-        loadComponent: () => import('./demo/pages/employees/employees.component') 
-       
+        loadComponent: () => import('./demo/pages/employees/employees.component')
+
       },
       {
         path: 'users',
-        loadComponent: () => import('./demo/pages/users/users.component') 
-       
-      }
+        loadComponent: () => import('./demo/pages/users/users.component')
+
+      },
       
+      {
+        path: 'system-control',
+        loadChildren: () => import('./demo/pages/system-control/system-control.module').then((m) => m.SystemControlModule)
+
+
+      }
+
     ]
   },
   {
@@ -54,7 +61,9 @@ const routes: Routes = [
       }
     ]
   },
-  
+
+
+
 ];
 
 @NgModule({
