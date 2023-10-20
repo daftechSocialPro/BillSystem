@@ -22,14 +22,15 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthHeaderIneterceptor } from './http-interceptors/auth-header-interceptor';
 import { MessageService } from 'primeng/api';
 import { SpinnerComponent } from './components/spinner/spinner.component';
-import { ToastModule} from 'primeng/toast';
+import { ToastModule } from 'primeng/toast';
 import { DropdownModule } from 'primeng/dropdown';
 
 import { AddEmployeeComponent } from './demo/pages/employees/add-employee/add-employee.component';
 import { UpdateEmployeeComponent } from './demo/pages/employees/update-employee/update-employee.component';
 import { AddUserComponent } from './demo/pages/users/add-user/add-user.component';
 import { UserRoleComponent } from './demo/pages/users/user-role/user-role.component';
-import { AutoCompleteComponent } from './components/auto-complete/auto-complete.component'
+import { AutoCompleteComponent } from './components/auto-complete/auto-complete.component';
+import { CustomerCategoryComponent } from './demo/pages/system-control/scs-data/customer-category/customer-category.component';
 
 @NgModule({
   declarations: [
@@ -46,19 +47,25 @@ import { AutoCompleteComponent } from './components/auto-complete/auto-complete.
     NavCollapseComponent,
     ConfigurationComponent,
     GuestComponent,
-    SpinnerComponent, 
-     AddEmployeeComponent, UpdateEmployeeComponent, AddUserComponent, UserRoleComponent, AutoCompleteComponent,
+    SpinnerComponent,
+    AddEmployeeComponent, 
+    UpdateEmployeeComponent, 
+    AddUserComponent, 
+    UserRoleComponent, 
+    AutoCompleteComponent, 
+    CustomerCategoryComponent, 
+  
 
   ],
-  imports: [BrowserModule, AppRoutingModule, SharedModule, BrowserAnimationsModule,HttpClientModule,ToastModule,DropdownModule],
+  imports: [BrowserModule, AppRoutingModule, SharedModule, BrowserAnimationsModule, HttpClientModule, ToastModule, DropdownModule],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthHeaderIneterceptor,
       multi: true,
     },
-    MessageService,    
+    MessageService,
     NavigationItem],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

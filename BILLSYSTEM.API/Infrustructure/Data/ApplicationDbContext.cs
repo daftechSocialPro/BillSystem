@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using IntegratedInfrustructure.Model.Configuration;
 using IntegratedInfrustructure.Model.HRM;
-
+using IntegratedInfrustructure.Model.SRC;
 
 namespace IntegratedInfrustructure.Data
 {
@@ -37,7 +37,12 @@ namespace IntegratedInfrustructure.Data
 
         #endregion
 
-     
+        #region SCS
+
+        public DbSet<CustomerCategory> CustomerCategories { get; set; }
+        #endregion
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
          
@@ -58,6 +63,8 @@ namespace IntegratedInfrustructure.Data
                 entity.HasKey(t => new { t.UserId, t.LoginProvider, t.Name });
             });
 
+
+            modelBuilder.Entity<CustomerCategory>().ToTable("CustomerCategories", "SCS");
             //modelBuilder.Entity<IdentityUserLogin<string>>(entity =>
             //{
             //    entity.HasNoKey();
