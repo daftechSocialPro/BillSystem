@@ -70,6 +70,10 @@ namespace IntegratedInfrustructure.Data
             modelBuilder.Entity<CustomerCategory>().ToTable("CustomerCategories", "SCS");
 
             modelBuilder.Entity<MeterSize>().ToTable("MeterSizes", "SCS");
+
+            modelBuilder.Entity<MeterSize>()
+         .HasIndex(e => e.Code)
+         .IsUnique();
             //modelBuilder.Entity<IdentityUserLogin<string>>(entity =>
             //{
             //    entity.HasNoKey();

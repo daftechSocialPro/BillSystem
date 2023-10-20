@@ -20,7 +20,7 @@ import { ConfigurationComponent } from './theme/layout/admin/configuration/confi
 import { GuestComponent } from './theme/layout/guest/guest.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthHeaderIneterceptor } from './http-interceptors/auth-header-interceptor';
-import { MessageService } from 'primeng/api';
+import { ConfirmationService, MessageService } from 'primeng/api';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { ToastModule } from 'primeng/toast';
 import { DropdownModule } from 'primeng/dropdown';
@@ -31,7 +31,7 @@ import { AddUserComponent } from './demo/pages/users/add-user/add-user.component
 import { UserRoleComponent } from './demo/pages/users/user-role/user-role.component';
 import { AutoCompleteComponent } from './components/auto-complete/auto-complete.component';
 import { CustomerCategoryComponent } from './demo/pages/system-control/scs-data/customer-category/customer-category.component';
-
+import {ConfirmDialogModule} from 'primeng/confirmdialog'
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +57,7 @@ import { CustomerCategoryComponent } from './demo/pages/system-control/scs-data/
   
 
   ],
-  imports: [BrowserModule, AppRoutingModule, SharedModule, BrowserAnimationsModule, HttpClientModule, ToastModule, DropdownModule],
+  imports: [BrowserModule, AppRoutingModule, SharedModule, BrowserAnimationsModule, HttpClientModule, ToastModule, DropdownModule,ConfirmDialogModule],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
@@ -65,7 +65,10 @@ import { CustomerCategoryComponent } from './demo/pages/system-control/scs-data/
       multi: true,
     },
     MessageService,
-    NavigationItem],
+    NavigationItem,
+    ConfirmationService
+  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

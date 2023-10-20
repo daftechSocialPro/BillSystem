@@ -2,8 +2,10 @@
 using Implementation.Services.Authentication;
 using IntegratedImplementation.Interfaces.Configuration;
 using IntegratedImplementation.Interfaces.HRM;
+using IntegratedImplementation.Interfaces.SystemControl;
 using IntegratedImplementation.Services.Configuration;
 using IntegratedImplementation.Services.HRM;
+using IntegratedImplementation.Services.SystemControl;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace IntegratedImplementation.Datas
@@ -17,7 +19,14 @@ namespace IntegratedImplementation.Datas
          
             services.AddScoped<IGeneralConfigService, GeneralConfigService>();
             services.AddScoped<IEmployeeService, EmployeeService>();
-  
+
+            #region System-control
+
+            services.AddScoped<IMeterSizeService, MeterSizeService>();
+
+
+            #endregion
+
             return services;
         }
     }

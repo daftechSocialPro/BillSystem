@@ -7,6 +7,7 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { UserList } from 'src/models/auth/userDto';
 import { UserService } from 'src/app/services/user.service';
 import { UserRoleComponent } from './user-role/user-role.component';
+import { CommonService } from 'src/app/services/common.service';
 @Component({
   selector: 'app-users',
   standalone: true,
@@ -24,7 +25,8 @@ export default class UsersComponent implements OnInit {
   }
   constructor( 
     private modalService : NgbModal,
-    private userService:UserService){
+    private userService:UserService,
+    private commonService : CommonService){
 
   }
 
@@ -55,5 +57,10 @@ export default class UsersComponent implements OnInit {
     modalRef.result.then(()=>{
       this.getUsers()
     })
+  }
+
+  getImagePath(url:string){
+
+    return this.commonService.createImgPath(url)
   }
 }

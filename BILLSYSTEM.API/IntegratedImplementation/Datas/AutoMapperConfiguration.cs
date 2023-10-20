@@ -10,7 +10,9 @@ using static IntegratedInfrustructure.Data.EnumList;
 
 using IntegratedInfrustructure.Data;
 using IntegratedImplementation.DTOS.Configuration;
-
+using IntegratedInfrustructure.Migrations;
+using IntegratedInfrustructure.Model.SCS;
+using IntegratedImplementation.DTOS.SystemControl;
 
 namespace IntegratedImplementation.Datas
 {
@@ -30,6 +32,8 @@ namespace IntegratedImplementation.Datas
             CreateMap<EmployeeList, SelectListDto>()
                .ForMember(a => a.Id, e => e.MapFrom(mfg => mfg.Id))
                .ForMember(a => a.Name, e => e.MapFrom(mfg => $"{mfg.FullName}"));
+
+            CreateMap<MeterSize, MeterSizeGetDto>();
 
           
 

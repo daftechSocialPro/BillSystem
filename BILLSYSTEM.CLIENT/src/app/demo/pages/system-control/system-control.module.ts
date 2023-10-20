@@ -7,6 +7,8 @@ import { SharedModule } from 'primeng/api';
 import { TableModule } from 'primeng/table';
 import { TabViewModule } from 'primeng/tabview';
 import { MeterConfigComponent } from './scs-data/meter/meter-config.component';
+import { AddMeterSizeComponent } from './scs-data/meter/meter-size/add-meter-size/add-meter-size.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -16,11 +18,12 @@ import { MeterConfigComponent } from './scs-data/meter/meter-config.component';
   declarations: [
     MeterSizeComponent,
     ScsDataComponent,
-    MeterConfigComponent
+    MeterConfigComponent,
+    AddMeterSizeComponent
     
   ],
   imports: [
-    CommonModule,SystemControlRoutingModule,SharedModule,TableModule,TabViewModule
+    CommonModule,SystemControlRoutingModule,SharedModule,TableModule,TabViewModule,FormsModule,ReactiveFormsModule
   ]
 })
 export class SystemControlModule { }
