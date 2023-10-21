@@ -30,7 +30,7 @@ import { UpdateEmployeeComponent } from './demo/pages/employees/update-employee/
 import { AddUserComponent } from './demo/pages/users/add-user/add-user.component';
 import { UserRoleComponent } from './demo/pages/users/user-role/user-role.component';
 import { AutoCompleteComponent } from './components/auto-complete/auto-complete.component';
-import { CustomerCategoryComponent } from './demo/pages/system-control/scs-data/customer-category/customer-category.component';
+
 import {ConfirmDialogModule} from 'primeng/confirmdialog'
 @NgModule({
   declarations: [
@@ -53,7 +53,7 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog'
     AddUserComponent, 
     UserRoleComponent, 
     AutoCompleteComponent, 
-    CustomerCategoryComponent, 
+     
   
 
   ],

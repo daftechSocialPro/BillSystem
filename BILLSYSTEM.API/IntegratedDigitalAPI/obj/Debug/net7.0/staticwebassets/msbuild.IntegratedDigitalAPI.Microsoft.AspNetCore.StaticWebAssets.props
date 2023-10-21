@@ -80,6 +80,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Employee\17b50f81-d37d-45db-b484-8c7e3842b8c7.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Employee\1c7fc919-e30d-442f-8be8-e6ac009d84a5.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>IntegratedDigitalAPI</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/IntegratedDigitalAPI</BasePath>
+      <RelativePath>Employee/1c7fc919-e30d-442f-8be8-e6ac009d84a5.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Employee\1c7fc919-e30d-442f-8be8-e6ac009d84a5.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Employee\1d05f9b5-a326-4ea0-b672-c645244513b4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>IntegratedDigitalAPI</SourceId>

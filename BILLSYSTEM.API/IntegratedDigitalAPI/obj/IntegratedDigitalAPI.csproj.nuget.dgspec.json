@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\IntegratedDigitalAPI\\IntegratedDigitalAPI.csproj": {}
+    "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\IntegratedDigitalAPI\\IntegratedDigitalAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\Infrustructure\\IntegratedInfrustructure.csproj": {
+    "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\Infrustructure\\IntegratedInfrustructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\Infrustructure\\IntegratedInfrustructure.csproj",
+        "projectUniqueName": "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\Infrustructure\\IntegratedInfrustructure.csproj",
         "projectName": "IntegratedInfrustructure",
-        "projectPath": "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\Infrustructure\\IntegratedInfrustructure.csproj",
-        "packagesPath": "C:\\Users\\Job\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\Infrustructure\\obj\\",
+        "projectPath": "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\Infrustructure\\IntegratedInfrustructure.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\Infrustructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Job\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,21 +81,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\IntegratedDigitalAPI\\IntegratedDigitalAPI.csproj": {
+    "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\IntegratedDigitalAPI\\IntegratedDigitalAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\IntegratedDigitalAPI\\IntegratedDigitalAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\IntegratedDigitalAPI\\IntegratedDigitalAPI.csproj",
         "projectName": "IntegratedDigitalAPI",
-        "projectPath": "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\IntegratedDigitalAPI\\IntegratedDigitalAPI.csproj",
-        "packagesPath": "C:\\Users\\Job\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\IntegratedDigitalAPI\\obj\\",
+        "projectPath": "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\IntegratedDigitalAPI\\IntegratedDigitalAPI.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\IntegratedDigitalAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Job\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -109,11 +109,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\Infrustructure\\IntegratedInfrustructure.csproj": {
-                "projectPath": "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\Infrustructure\\IntegratedInfrustructure.csproj"
+              "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\Infrustructure\\IntegratedInfrustructure.csproj": {
+                "projectPath": "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\Infrustructure\\IntegratedInfrustructure.csproj"
               },
-              "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\IntegratedImplementation\\IntegratedImplementation.csproj": {
-                "projectPath": "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\IntegratedImplementation\\IntegratedImplementation.csproj"
+              "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\IntegratedImplementation\\IntegratedImplementation.csproj": {
+                "projectPath": "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\IntegratedImplementation\\IntegratedImplementation.csproj"
               }
             }
           }
@@ -210,21 +210,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\IntegratedImplementation\\IntegratedImplementation.csproj": {
+    "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\IntegratedImplementation\\IntegratedImplementation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\IntegratedImplementation\\IntegratedImplementation.csproj",
+        "projectUniqueName": "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\IntegratedImplementation\\IntegratedImplementation.csproj",
         "projectName": "IntegratedImplementation",
-        "projectPath": "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\IntegratedImplementation\\IntegratedImplementation.csproj",
-        "packagesPath": "C:\\Users\\Job\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\IntegratedImplementation\\obj\\",
+        "projectPath": "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\IntegratedImplementation\\IntegratedImplementation.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\IntegratedImplementation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Job\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -238,8 +238,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\Infrustructure\\IntegratedInfrustructure.csproj": {
-                "projectPath": "C:\\Users\\Job\\Desktop\\DAFCFile\\BillSystem\\BILLSYSTEM.API\\Infrustructure\\IntegratedInfrustructure.csproj"
+              "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\Infrustructure\\IntegratedInfrustructure.csproj": {
+                "projectPath": "C:\\Users\\Hp\\Desktop\\Kirubel Files\\DAFTech Computer\\BillSystem\\BILLSYSTEM.API\\Infrustructure\\IntegratedInfrustructure.csproj"
               }
             }
           }
@@ -287,7 +287,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

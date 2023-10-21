@@ -16,7 +16,8 @@ using IntegratedInfrustructure.Model.SCS;
 namespace IntegratedInfrustructure.Data
 {
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser> {
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    {
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
@@ -41,14 +42,15 @@ namespace IntegratedInfrustructure.Data
         #region SCS
 
         public DbSet<CustomerCategory> CustomerCategories { get; set; }
-
         public DbSet<MeterSize> MeterSizes { get; set; }
+        public DbSet<Village> Villages { get; set; }
+
         #endregion
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-         
+
             modelBuilder.Entity<GeneralCodes>()
                .HasIndex(b => b.GeneralCodeType).IsUnique();
 
@@ -71,9 +73,16 @@ namespace IntegratedInfrustructure.Data
 
             modelBuilder.Entity<MeterSize>().ToTable("MeterSizes", "SCS");
 
+            modelBuilder.Entity<Village>().ToTable("Villages", "SCS");
+
             modelBuilder.Entity<MeterSize>()
          .HasIndex(e => e.Code)
          .IsUnique();
+
+            modelBuilder.Entity<CustomerCategory>()
+        .HasIndex(e => e.Code)
+        .IsUnique();
+
             //modelBuilder.Entity<IdentityUserLogin<string>>(entity =>
             //{
             //    entity.HasNoKey();

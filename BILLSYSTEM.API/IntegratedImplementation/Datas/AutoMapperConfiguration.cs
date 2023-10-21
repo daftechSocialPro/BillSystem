@@ -13,6 +13,7 @@ using IntegratedImplementation.DTOS.Configuration;
 using IntegratedInfrustructure.Migrations;
 using IntegratedInfrustructure.Model.SCS;
 using IntegratedImplementation.DTOS.SystemControl;
+using IntegratedInfrustructure.Model.SRC;
 
 namespace IntegratedImplementation.Datas
 {
@@ -34,6 +35,8 @@ namespace IntegratedImplementation.Datas
                .ForMember(a => a.Name, e => e.MapFrom(mfg => $"{mfg.FullName}"));
 
             CreateMap<MeterSize, MeterSizeGetDto>();
+            CreateMap<CustomerCategory, CustomerCategoryGetDto>();
+            CreateMap<Village, VillageGetDto>();
 
           
 

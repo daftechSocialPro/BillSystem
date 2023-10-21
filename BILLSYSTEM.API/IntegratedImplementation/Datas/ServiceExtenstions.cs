@@ -23,6 +23,9 @@ namespace IntegratedImplementation.Datas
             #region System-control
 
             services.AddScoped<IMeterSizeService, MeterSizeService>();
+            services.AddScoped<ICustomerCategoryService, CustomerCategoryService>();
+            services.AddScoped<IVillageService, VillageService>();
+          
 
 
             #endregion

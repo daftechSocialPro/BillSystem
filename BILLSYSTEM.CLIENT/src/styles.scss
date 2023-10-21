@@ -250,4 +250,19 @@ $background-color_1: var(--bs-body-color);
   .custom-table tbody tr:hover {
     background-color: #e0e0e0;
   }
-
+  .list-group-item.active {
+	background-color: #e1d8f1!important;
+	color: #835fc4!important;
+}
+.nav-link {
+	color: black;
+	font-size: 15px;
+}
+.nav-link:hover {
+	color: #8155d2!important;
+	font-size: 15px;
+}
+.nav-link.active{
+	color: #8155d2!important;	
+	font-size: 15px;
+}

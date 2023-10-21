@@ -1,1 +1,38 @@
-<p>customer-category works!</p>
+<div style="display: flex;justify-content: center;">
+
+
+    <div class="col-md-10 p-4 ">
+        <div class="col-lg-12 text-end p-2">
+            <button type="button" class="btn btn-outline-success" (click)="addCustomerCategories()"><i
+                    class="pi pi-plus me-1" style="font-size: 12px;"></i>
+                Cusomer Category</button>
+        </div>
+        <table class="custom-table">
+            <thead>
+                <tr>
+
+                    <th>Name</th>
+                    <th>Code</th>
+                    <th>Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of CustomerCategories ;let i = index">
+
+                    <td>{{item.name}}</td>
+                    <td>{{item.code}}</td>
+                    <td>
+                        <button type="button" (click)="updateCustomerCategories(item)"
+                            class="btn btn-outline-warning btn-sm"><i class="ti ti-pencil"></i></button> |
+                        <button type="button" (click)="removeCustomerCategories(item.id)"
+                            class="btn btn-outline-danger btn-sm"><i class="ti ti-trash"></i></button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
