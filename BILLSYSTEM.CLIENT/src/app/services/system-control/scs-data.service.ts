@@ -7,6 +7,11 @@ import { UserService } from '../user.service';
 import { ResponseMessage } from 'src/models/ResponseMessage.Model';
 import { ICustomerCategoryGetDto, ICustomerCategoryPostDto } from 'src/models/system-control/ICustomerCategoryDto';
 import { IVillageGetDto, IVillagePostDto } from 'src/models/system-control/IVillageDto';
+import { IBillCycleGetDto, IBillCyclePostDto } from 'src/models/system-control/IBillCycleDto';
+import { IMeterDigitPostDto,IMeterDigitGetDto  } from 'src/models/system-control/IMeterDigitDto';
+import { IMeterModelGetDto, IMeterModelPostDto } from 'src/models/system-control/IMeterModelDto';
+import { IMeterTypeGetDto, IMeterTypePostDto } from 'src/models/system-control/IMeterTypeDto';
+import { IMeterClassGetDto, IMeterClassPostDto } from 'src/models/system-control/IMeterClassDto';
 
 @Injectable({
   providedIn: 'root'
@@ -65,5 +70,84 @@ export class ScsDataService {
 
   }
 
+//BillCycle
 
+getBillCycle() {
+  return this.http.get<IBillCycleGetDto[]>(this.baseUrl + "/BillCycle/GetBillCycle")
+}
+addBillCycle(addBillCycle: IBillCyclePostDto) {
+  addBillCycle.createdById = this.userService.getCurrentUser().userId
+  return this.http.post<ResponseMessage>(this.baseUrl + "/BillCycle/AddBillCycle", addBillCycle)
+}
+updateBillCycle(updateBillCycle: IBillCycleGetDto) {
+  return this.http.put<ResponseMessage>(this.baseUrl + "/BillCycle/UpdateBillCycle", updateBillCycle)
+}
+
+deleteBillCycle(BillCycleId: string) {
+  return this.http.delete<ResponseMessage>(this.baseUrl + `/BillCycle/DeleteBillCycle?BillCycleId=${BillCycleId}`)
+
+}
+//MeterDigit
+getMeterDigit() {
+  return this.http.get<IMeterDigitGetDto[]>(this.baseUrl + "/MeterDigit/GetMeterDigit")
+}
+addMeterDigit(addMeterDigit: IMeterDigitPostDto) {
+  addMeterDigit.createdById = this.userService.getCurrentUser().userId
+  return this.http.post<ResponseMessage>(this.baseUrl + "/MeterDigit/AddMeterDigit", addMeterDigit)
+}
+updateMeterDigit(updateMeterDigit: IMeterDigitGetDto) {
+  return this.http.put<ResponseMessage>(this.baseUrl + "/MeterDigit/UpdateMeterDigit", updateMeterDigit)
+}
+
+deleteMeterDigit(MeterDigitId: string) {
+  return this.http.delete<ResponseMessage>(this.baseUrl + `/MeterDigit/DeleteMeterDigit?MeterDigitId=${MeterDigitId}`)
+
+}//MeterModel
+getMeterModel() {
+  return this.http.get<IMeterModelGetDto[]>(this.baseUrl + "/MeterModel/GetMeterModel")
+}
+addMeterModel(addMeterModel: IMeterModelPostDto) {
+  addMeterModel.createdById = this.userService.getCurrentUser().userId
+  return this.http.post<ResponseMessage>(this.baseUrl + "/MeterModel/AddMeterModel", addMeterModel)
+}
+updateMeterModel(updateMeterModel: IMeterModelGetDto) {
+  return this.http.put<ResponseMessage>(this.baseUrl + "/MeterModel/UpdateMeterModel", updateMeterModel)
+}
+
+deleteMeterModel(MeterModelId: string) {
+  return this.http.delete<ResponseMessage>(this.baseUrl + `/MeterModel/DeleteMeterModel?MeterModelId=${MeterModelId}`)
+
+}
+//MeterType
+getMeterType() {
+  return this.http.get<IMeterTypeGetDto[]>(this.baseUrl + "/MeterType/GetMeterType")
+}
+addMeterType(addMeterType: IMeterTypePostDto) {
+  addMeterType.createdById = this.userService.getCurrentUser().userId
+  return this.http.post<ResponseMessage>(this.baseUrl + "/MeterType/AddMeterType", addMeterType)
+}
+updateMeterType(updateMeterType: IMeterTypeGetDto) {
+  return this.http.put<ResponseMessage>(this.baseUrl + "/MeterType/UpdateMeterType", updateMeterType)
+}
+
+deleteMeterType(MeterTypeId: string) {
+  return this.http.delete<ResponseMessage>(this.baseUrl + `/MeterType/DeleteMeterType?MeterTypeId=${MeterTypeId}`)
+
+}
+//MeterClass
+getMeterClass() {
+  return this.http.get<IMeterClassGetDto[]>(this.baseUrl + "/MeterClass/GetMeterClass")
+}
+addMeterClass(addMeterClass: IMeterClassPostDto) {
+  addMeterClass.createdById = this.userService.getCurrentUser().userId
+  return this.http.post<ResponseMessage>(this.baseUrl + "/MeterClass/AddMeterClass", addMeterClass)
+}
+updateMeterClass(updateMeterClass: IMeterClassGetDto) {
+  return this.http.put<ResponseMessage>(this.baseUrl + "/MeterClass/UpdateMeterClass", updateMeterClass)
+}
+
+deleteMeterClass(MeterClassId: string) {
+  return this.http.delete<ResponseMessage>(this.baseUrl + `/MeterClass/DeleteMeterClass?MeterClassId=${MeterClassId}`)
+
+}
 }
